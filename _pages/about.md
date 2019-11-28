@@ -10,6 +10,6 @@ Email: radomir.turca@codelec.cz
 
 Web: [www.codelec.cz](https://www.codelec.cz)
 
-Telefon: +420 776 287 213
+Web: [www.codelec.eu](https://www.codelec.eu)
 
-IČ: 06109918 
+Phone: +420 776 287 213
