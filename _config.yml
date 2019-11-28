@@ -93,7 +93,7 @@ paginate_path: /page:num/
 exclude:
   - Gemfile
   - Gemfile.lock
-  - LICENSE
+  - LICENSE 
   - README.md
   - CNAME
 
