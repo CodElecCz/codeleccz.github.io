@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Camera application for Hyundai Motors
+title: Camera inspection application
 categories: [MachineVision,PYLON,Qt]
 ---
 
-Camera user interface for Basler camera used for Hyundai Motors project.
+Camera user interface for Basler cameras.
 
 Hardware:
 - Industrial GigE cameras [Basler acA 1920-25gm](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca1920-25gm/)
