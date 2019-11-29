@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Ink printer User Interface for Massag
+title: Ink printer user interface for Massag
 categories: [Printer]
 ---
 
 # JetPrinterUIv1 - Massag application
 
-Ink printer User Interface.
+Ink printer user interface.
 
 Hardware:
 - [Leibinger Jet3](https://leibinger-group.com/en/products/ink-jet-drucker0/universal-line/jet3up/)
