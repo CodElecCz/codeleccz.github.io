@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Camera user interface application for Hyundai Motors
-categories: [MachineVision,GUI,PYLON]
+categories: [MachineVision,PYLON,Qt]
 ---
 
 Camera user interface for Basler camera used for Hyundai Motors project.
