@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Code snippets in a blog post
-categories: [HTML,Code]
+title: Camera user interface application for Hyundai Motors
+categories: [MachineVision,GUI]
 ---
 
 ### [CameraUIv1](https://codeleccz.github.io/CameraUIv1/) - Hyundai application
