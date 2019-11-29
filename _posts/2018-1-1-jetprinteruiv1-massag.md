@@ -16,6 +16,6 @@ Software:
 
 ### 1. Main window view
 
-![JetPrinter GUI 1](https://codeleccz.github.io/images/JetPrinterUIv1/massag1.png)
+![JetPrinter GUI 1](https://codeleccz.github.io/images/JetPrinterUIv1/Massag1.png)
 
 
