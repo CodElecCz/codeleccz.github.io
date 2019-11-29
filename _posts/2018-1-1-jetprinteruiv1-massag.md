@@ -1,32 +1,21 @@
 ---
 layout: post
 title: Camera User Interface aplication for Hyundai Motors
-categories: [MachineVision]
+categories: [Printer]
 ---
 
-# [CameraUIv1](https://codeleccz.github.io/CameraUIv1/) - Hyundai application
+# JetPrinterUIv1 - Massag application
 
-Camera User Interface for BASLER camera used for Hyundai Motors project.
+Ink printer User Interface.
 
-Industrial GigE cameras:
-- [Basler acA 1920-25gm](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca1920-25gm/)
+Printer:
+- [Leibinger Jet3](https://leibinger-group.com/en/products/ink-jet-drucker0/universal-line/jet3up/)
 
 Software:
-- Qt 5.11.2
-- [Basler Pylon 5](https://www.baslerweb.com/en/products/software/pylon-windows/)
+- Qt 4
 
 ### 1. Main window view
 
-![Camera GUI 1](https://codeleccz.github.io/images/CameraUIv1/hyundai1.png)
+![JetPrinter GUI 1](https://codeleccz.github.io/images/JetPrinterUIv1/massag1.png)
 
-### 2. User interface for image snap
 
-![Camera GUI 2](https://codeleccz.github.io/images/CameraUIv1/hyundai2.png)
-
-### 3. Camera settings
-
-![Camera GUI 3](https://codeleccz.github.io/images/CameraUIv1/hyundai3.png)
-
-### 4. Stored images view
-
-![Camera GUI 4](https://codeleccz.github.io/images/CameraUIv1/hyundai4.png)
