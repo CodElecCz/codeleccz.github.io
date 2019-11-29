@@ -4,10 +4,6 @@ title:  Code snippets in a blog post
 categories: [HTML,Code]
 ---
 
-This post demonstrate the use of code snippets in the theme. The code snippets are powered by [Pygments](http://pygments.org/) and the code theme that is been used in Reverie is called [Draula](https://draculatheme.com/).
-
-This is a raw snippet:
-
 ### [CameraUIv1](https://codeleccz.github.io/CameraUIv1/) - Hyundai application
 
 Camera user interface for Basler camera used for Hyundai Motors project.
