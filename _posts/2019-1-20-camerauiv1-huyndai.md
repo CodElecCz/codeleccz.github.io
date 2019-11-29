@@ -9,4 +9,4 @@ Camera User Interface for BASLER camera used for Hyundai Motors project.
 
 
 
-![Camera GUI](images/CameraUIv1/Hyundai1.png)
+![Camera GUI](/images/CameraUIv1/Hyundai1.png)
