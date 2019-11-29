@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Camera User Interface aplication for Hyundai Motors
+title: Camera user interface application for Hyundai Motors
 categories: [MachineVision]
 ---
 
 # [CameraUIv1](https://codeleccz.github.io/CameraUIv1/) - Hyundai application
 
-Camera User Interface for BASLER camera used for Hyundai Motors project.
+Camera user interface for BASLER camera used for Hyundai Motors project.
 
 Industrial GigE cameras:
 - [Basler acA 1920-25gm](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca1920-25gm/)
