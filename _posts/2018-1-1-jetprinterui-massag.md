@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jet printer application for Massag
-categories: [Printer]
+categories: [Qt]
 ---
 
 Jet printer user interface in Qt.
