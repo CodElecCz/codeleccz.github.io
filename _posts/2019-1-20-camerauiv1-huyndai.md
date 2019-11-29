@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Camera user interface application for Hyundai Motors
-categories: [MachineVision]
+categories: [MachineVision,GUI]
 ---
 
 ### [CameraUIv1](https://codeleccz.github.io/CameraUIv1/) - Hyundai application
