@@ -5,12 +5,17 @@ categories: [MachineVision]
 ---
 
 # [CameraUIv1](https://codeleccz.github.io/CameraUIv1/) - Hyundai application
+
 Camera User Interface for BASLER camera used for Hyundai Motors project.
 
 Industrial GigE cameras:
 > [Basler acA 1920-25gm](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca1920-25gm/)
 
-Software
+
+Software:
+> Qt 5.11.2
+
+> [Basler Pylon 5](https://www.baslerweb.com/en/products/software/pylon-windows/)
 
 ## 1. Main window view
 
