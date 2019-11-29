@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Camera user interface application for Hyundai Motors
+title: Camera application for Hyundai Motors
 categories: [MachineVision,PYLON,Qt]
 ---
 
