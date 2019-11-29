@@ -15,6 +15,9 @@ Software:
 - Qt 5.11.2
 - [Basler Pylon 5](https://www.baslerweb.com/en/products/software/pylon-windows/)
 
+<div style="text-align: center;">
+ <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7D6KJY&placement=wwwamitmerchantcom" id="_carbonads_js"></script>
+</div>
 
 ### 1. Main window view
 
