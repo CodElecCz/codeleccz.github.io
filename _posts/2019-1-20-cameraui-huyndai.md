@@ -1,42 +1,32 @@
 ---
 layout: post
-title:  Code snippets in a blog post
-categories: [HTML,Code]
+title: Camera user interface application for Hyundai Motors
+categories: [MachineVision,GUI]
 ---
 
-This post demonstrate the use of code snippets in the theme. The code snippets are powered by [Pygments](http://pygments.org/) and the code theme that is been used in Reverie is called [Draula](https://draculatheme.com/).
+Camera user interface for Basler camera used for Hyundai Motors project.
 
-This is a raw snippet:
+Hardware:
+- Industrial GigE cameras [Basler acA 1920-25gm](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca1920-25gm/)
 
-```
-hello world
-123
-This is a text snippet
-```
+Software:
+- Qt 5.11.2
+- [Basler Pylon 5](https://www.baslerweb.com/en/products/software/pylon-windows/)
 
-This is a PHP snippet:
+### [CameraUIv1](https://codeleccz.github.io/CameraUIv1/) - Hyundai application
 
-```php
-<?php
-    echo 'Hello, World!';
-?>
-```
+#### 1. Main window view
 
-This is a JavaScript snippet:
+![Camera GUI 1](https://codeleccz.github.io/images/CameraUIv1/hyundai1.png)
 
-```js
-const add = (a, b) => a + b
-const minus = (a, b) => a - b
+#### 2. User interface for image snap
 
-console.log(add(100,200))  // 300
-console.log(minus(100,200))  // -100
-```
+![Camera GUI 2](https://codeleccz.github.io/images/CameraUIv1/hyundai2.png)
 
-This is a Python snippet:
+#### 3. Camera settings
 
-```python
-def say_hello():
-    print("hello world!")
+![Camera GUI 3](https://codeleccz.github.io/images/CameraUIv1/hyundai3.png)
 
-say_hello()   // "hello world!"
-```
+#### 4. Stored images view
+
+![Camera GUI 4](https://codeleccz.github.io/images/CameraUIv1/hyundai4.png)
