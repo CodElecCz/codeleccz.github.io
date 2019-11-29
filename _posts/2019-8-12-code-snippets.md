@@ -8,38 +8,14 @@ This post demonstrate the use of code snippets in the theme. The code snippets a
 
 This is a raw snippet:
 
-```
-hello world
-123
-This is a text snippet
-```
+Camera user interface for Basler camera used for Hyundai Motors project.
 
-This is a PHP snippet:
+Hardware:
+- Industrial GigE cameras [Basler acA 1920-25gm](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca1920-25gm/)
 
-```php
-<?php
-    echo 'Hello, World!';
-?>
-```
-
-This is a JavaScript snippet:
-
-```js
-const add = (a, b) => a + b
-const minus = (a, b) => a - b
-
-console.log(add(100,200))  // 300
-console.log(minus(100,200))  // -100
-```
-
-This is a Python snippet:
-
-```python
-def say_hello():
-    print("hello world!")
-
-say_hello()   // "hello world!"
-```
+Software:
+- Qt 5.11.2
+- [Basler Pylon 5](https://www.baslerweb.com/en/products/software/pylon-windows/)
 
 #### 1. Main window view
 
