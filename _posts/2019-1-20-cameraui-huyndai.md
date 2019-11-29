@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Camera inspection application
+title: Camera inspection for Hyundai
 categories: [MachineVision,PYLON,Qt]
 ---
 
-Camera user interface for Basler cameras.
+Example of camera user interface used Basler cameras with Pylon SDK implementation.
 
 Hardware:
 - Industrial GigE cameras [Basler acA 1920-25gm](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca1920-25gm/)
