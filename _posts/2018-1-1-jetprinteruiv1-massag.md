@@ -4,7 +4,7 @@ title: Ink printer user interface for Massag
 categories: [Printer]
 ---
 
-# JetPrinterUIv1 - Massag application
+### JetPrinterUIv1 - Massag application
 
 Ink printer user interface.
 
@@ -15,23 +15,23 @@ Hardware:
 Software:
 - Qt 4
 
-### 1. User view
+#### 1. User view
 
 ![JetPrinter GUI 1](https://codeleccz.github.io/images/JetPrinterUIv1/Massag1.png)
 
-### 2. Printer view
+#### 2. Printer view
 
 ![JetPrinter GUI 1](https://codeleccz.github.io/images/JetPrinterUIv1/Massag2.png)
 
-### 3. Report view
+#### 3. Report view
 
 ![JetPrinter GUI 1](https://codeleccz.github.io/images/JetPrinterUIv1/Massag3.png)
 
-### 4. Settings view
+#### 4. Settings view
 
 ![JetPrinter GUI 1](https://codeleccz.github.io/images/JetPrinterUIv1/Massag4.png)
 
-### 5. PLC view
+#### 5. PLC view
 
 ![JetPrinter GUI 1](https://codeleccz.github.io/images/JetPrinterUIv1/Massag5.png)
 
