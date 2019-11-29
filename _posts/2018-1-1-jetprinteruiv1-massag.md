@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Camera User Interface aplication for Hyundai Motors
+title: Ink printer User Interface for Massag
 categories: [Printer]
 ---
 
