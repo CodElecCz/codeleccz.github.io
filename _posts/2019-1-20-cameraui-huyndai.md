@@ -5,7 +5,7 @@ categories: [MachineVision,PYLON,Qt]
 ---
 
 Application used Basler cameras with Pylon SDK implementation for image recoding. Key points:
-- camera multi-snap, difrend sites of car transmission
+- camera multi-snap, difrend sides of car transmission
 - image recording with image storage and MySQL database recoding
 - searching in database according transmission barcode
 
