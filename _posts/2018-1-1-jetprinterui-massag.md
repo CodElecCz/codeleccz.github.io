@@ -4,7 +4,10 @@ title: Jet printer application for pipe labeling
 categories: [Qt]
 ---
 
-Jet printer user interface in Qt.
+Jet printer user interface. Support:
+- PLC interface for signal inputs/outputs (insert, part present)
+- Jet printer interface for program selection and editing
+- processed parts database storing
 
 ### JetPrinterUIv1 - Massag application
 
