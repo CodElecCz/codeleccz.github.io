@@ -1,10 +1,13 @@
 ---
 layout: post
-title: Camera inspection for car transmitions
+title: Camera inspection for car transmissions
 categories: [MachineVision,PYLON,Qt]
 ---
 
-Example of camera user interface used Basler cameras with Pylon SDK implementation.
+Application used Basler cameras with Pylon SDK implementation for image recoding. Key points:
+- camera multi-snap, difrend sites of car transmission
+- image recording with image storage and MySQL database recoding
+- searching in database according transmission barcode
 
 Hardware:
 - Industrial GigE cameras [Basler acA 1920-25gm](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca1920-25gm/)
