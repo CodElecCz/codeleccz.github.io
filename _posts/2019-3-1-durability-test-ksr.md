@@ -15,7 +15,7 @@ Hardware:
 - National Instruments CompactDAQ
 
 Software:
-- National Instruments LabViev
+- National Instruments LabView
 
 #### 1. Force meassurement
 
