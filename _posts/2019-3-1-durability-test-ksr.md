@@ -12,6 +12,6 @@ Hardware:
 Software:
 - National Instruments LabViev
 
-#### 1. Main window view
+#### 1. Force meassurement
 
-![Camera GUI 1](https://codeleccz.github.io/images/DurabilityUIv1/ksr1.png)
+![Durability GUI 1](https://codeleccz.github.io/images/DurabilityUIv1/ksr1.png)
