@@ -1,0 +1,17 @@
+---
+layout: post
+title: Durability test application for KSR
+categories: [LabView]
+---
+
+Durability test application for gas pedal meassurement in laboratory.
+
+Hardware:
+- National Instruments CompactDAQ
+
+Software:
+- National Instruments LabViev
+
+#### 1. Main window view
+
+![Camera GUI 1](https://codeleccz.github.io/images/CameraUIv1/hyundai1.png)
