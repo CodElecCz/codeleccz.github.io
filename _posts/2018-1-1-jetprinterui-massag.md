@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jet printer application for Massag
+title: Jet printer application for pipe labeling
 categories: [Qt]
 ---
 
