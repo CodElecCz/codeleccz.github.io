@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Camera inspection for Hyundai
+title: Camera inspection for car transmitions
 categories: [MachineVision,PYLON,Qt]
 ---
 
