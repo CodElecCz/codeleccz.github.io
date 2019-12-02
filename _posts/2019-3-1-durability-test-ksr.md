@@ -4,7 +4,12 @@ title: Durability test application for car pedals
 categories: [LabView]
 ---
 
-Durability test application for car pedals meassurement in laboratory.
+Durability test application for car pedals measurement in laboratory. Keypoints:
+- single force measurement module for non-destructive and destructive testing measurement
+- durability measurement module
+- durability programs parametrization module
+- manual/maintenance module
+- multilanguage interface
 
 Hardware:
 - National Instruments CompactDAQ
