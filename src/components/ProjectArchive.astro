@@ -14,11 +14,14 @@ interface Props {
 const { locale } = Astro.props;
 const isEnglish = locale === 'en';
 const posts = await getCollection('blog');
-posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const externalArticles = getExternalArticlesForLocale(locale);
-const dateFormat = new Intl.DateTimeFormat(isEnglish ? 'en-GB' : 'cs-CZ', {
+const articles = [
+	...externalArticles.map((article) => ({ kind: 'external' as const, date: new Date(article.locale.date), article })),
+	...posts.map((post) => ({ kind: 'local' as const, date: post.data.pubDate, post })),
+].sort((a, b) => b.date.valueOf() - a.date.valueOf());
+const dateFormat = new Intl.DateTimeFormat('cs-CZ', {
 	day: 'numeric',
-	month: 'short',
+	month: 'numeric',
 	year: 'numeric',
 	timeZone: 'UTC',
 });
@@ -54,15 +57,31 @@ const dateFormat = new Intl.DateTimeFormat(isEnglish ? 'en-GB' : 'cs-CZ', {
 				</div>
 			</section>
 
-			{externalArticles.length > 0 && (
+			{articles.length > 0 && (
 				<section aria-labelledby="external-articles-title" class="border-b border-slate-800 bg-slate-950">
 					<div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
 						<h2 id="external-articles-title" class="mb-8 text-3xl font-bold tracking-tight text-white">
 							{isEnglish ? 'Technical articles' : 'Články'}
 						</h2>
+						{isEnglish && posts.length > 0 && <p class="mb-6 text-sm text-slate-400">Local articles are available in their Czech original.</p>}
 						<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-							{externalArticles.map((article) => {
-								const localeEntry = article.locales[locale] ?? article.locales[article.defaultLocale];
+							{articles.map((item) => {
+								if (item.kind === 'local') {
+									const { post } = item;
+									return (
+										<article class="rounded-xl border border-slate-800 bg-slate-900/60 p-6 transition hover:border-cyan-400/40 hover:bg-slate-900">
+											<h3 class="mb-3 text-xl font-semibold text-white">
+												<a class="text-white no-underline transition hover:text-cyan-300" href={getRelativeLocaleUrl('cs', `blog/${post.id}`)} hreflang="cs">
+													{post.data.title}
+												</a>
+											</h3>
+											<p class="mb-4 text-sm leading-relaxed text-slate-400">{post.data.description}</p>
+											<time class="font-mono text-xs text-slate-500" datetime={item.date.toISOString()}>{dateFormat.format(item.date)}</time>
+										</article>
+									);
+								}
+								const { article } = item;
+								const localeEntry = article.locale;
 								const articleHref = getRelativeLocaleUrl(locale, `blog/${article.slug}`);
 								const repoHref = `https://github.com/${article.repo}`;
 								return (
@@ -79,7 +98,7 @@ const dateFormat = new Intl.DateTimeFormat(isEnglish ? 'en-GB' : 'cs-CZ', {
 										</h3>
 										<p class="mb-4 flex-1 text-sm leading-relaxed text-slate-400">{localeEntry.description}</p>
 										<p class="mb-5 text-xs text-slate-500">
-											<time datetime={localeEntry.date}>{dateFormat.format(new Date(localeEntry.date))}</time>
+											<time datetime={localeEntry.date}>{dateFormat.format(item.date)}</time>
 										</p>
 										<div class="mt-auto flex flex-wrap gap-3">
 											<a class="text-sm font-semibold text-cyan-300 underline decoration-cyan-400/30 underline-offset-4 transition hover:text-cyan-200" href={articleHref}>
@@ -98,29 +117,6 @@ const dateFormat = new Intl.DateTimeFormat(isEnglish ? 'en-GB' : 'cs-CZ', {
 			)}
 
 
-			{posts.length > 0 && (
-				<section aria-labelledby="articles-title" class="border-t border-slate-800 bg-slate-950">
-					<div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
-						<h2 id="articles-title" class="mb-8 text-3xl font-bold tracking-tight text-white">
-							{isEnglish ? 'Technical articles & notes' : 'Odborné články & poznámky'}
-						</h2>
-						{isEnglish && <p class="mb-6 text-sm text-slate-400">Articles are available in their Czech original.</p>}
-						<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-							{posts.map((post) => (
-								<article class="rounded-xl border border-slate-800 bg-slate-900/60 p-6 transition hover:border-cyan-400/40 hover:bg-slate-900">
-									<h3 class="mb-3 text-xl font-semibold text-white">
-										<a class="text-white no-underline transition hover:text-cyan-300" href={getRelativeLocaleUrl('cs', `blog/${post.id}`)} hreflang="cs">
-											{post.data.title}
-										</a>
-									</h3>
-									<p class="mb-4 text-sm leading-relaxed text-slate-400">{post.data.description}</p>
-									<time class="font-mono text-xs text-slate-500" datetime={post.data.pubDate.toISOString()}>{dateFormat.format(post.data.pubDate)}</time>
-								</article>
-							))}
-						</div>
-					</div>
-				</section>
-			)}
 		</main>
 		<Footer />
 	</body>

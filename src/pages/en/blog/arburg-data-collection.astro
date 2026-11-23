@@ -23,7 +23,7 @@ const contentHtml = article && article.content ? marked.parse(article.content) :
 					<p class="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-cyan-300">CODELEC · TECHNICAL ARTICLE</p>
 					<h1 class="mb-4 text-4xl font-bold tracking-tight text-white">{article?.locale.title ?? 'Arburg Data Collection'}</h1>
 					<p class="mb-3 text-sm text-slate-400">
-						<time datetime={article?.locale.date ?? '2026-11-16'}>{new Date(article?.locale.date ?? '2026-11-16').toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}</time>
+						<time datetime={article?.locale.date ?? '2026-11-16'}>{new Date(article?.locale.date ?? '2026-11-16').toLocaleDateString('cs-CZ', { year: 'numeric', month: 'numeric', day: 'numeric', timeZone: 'UTC' })}</time>
 					</p>
 					{article && (
 						<p class="mb-3 text-sm">

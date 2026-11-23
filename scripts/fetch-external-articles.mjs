@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,6 +15,39 @@ const githubHeaders = {
 
 if (process.env.GITHUB_TOKEN) {
   githubHeaders.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+}
+
+export async function fetchRepositoryUpdateDate(repo, fetcher = fetch) {
+  if (!repo) return null;
+
+  try {
+    const response = await fetcher(`https://api.github.com/repos/${repo}`, {
+      headers: githubHeaders,
+      signal: AbortSignal.timeout(10000),
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const payload = await response.json();
+    if (typeof payload?.pushed_at !== 'string' ||
+        !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(payload.pushed_at) ||
+        !Number.isFinite(Date.parse(payload.pushed_at))) {
+      throw new Error('Invalid pushed_at timestamp');
+    }
+    return payload.pushed_at;
+  } catch (error) {
+    console.warn(`[external-articles] Unable to fetch update date for ${repo}; keeping existing dates:`, error);
+    return null;
+  }
+}
+
+export async function updateArticleDates(article, fetcher = fetch) {
+  const date = await fetchRepositoryUpdateDate(article.repo, fetcher);
+  if (!date) return article;
+  return {
+    ...article,
+    locales: Object.fromEntries(
+      Object.entries(article.locales).map(([locale, metadata]) => [locale, { ...metadata, date }]),
+    ),
+  };
 }
 
 export function stripFrontmatter(markdown) {
@@ -89,6 +122,7 @@ async function main() {
 
   const articles = await Promise.all((manifest.articles ?? []).map(async (article) => {
     const contentEntries = {};
+    const datedArticlePromise = updateArticleDates(article);
 
     for (const [locale, sourceFile] of Object.entries(article.sourceFiles ?? {})) {
       const text = await fetchRepositoryMarkdown(article.repo, article.branch || 'master', sourceFile);
@@ -100,7 +134,7 @@ async function main() {
     }
 
     return {
-      ...article,
+      ...await datedArticlePromise,
       content: {
         ...(article.content ?? {}),
         ...contentEntries,
@@ -113,4 +147,6 @@ async function main() {
   console.log(`[external-articles] Wrote ${articles.length} article entries to ${path.relative(projectRoot, generatedPath)}.`);
 }
 
-await main();
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+  await main();
+}

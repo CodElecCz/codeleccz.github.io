@@ -32,7 +32,7 @@ const englishArticleUrl = new URL('en/blog/sagem-morpho-terminal/', siteBaseUrl)
 					<p class="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-cyan-300">CODELEC · ČLÁNEK</p>
 					<h1 class="mb-4 text-4xl font-bold tracking-tight text-white">{article?.locale.title ?? 'Sagem Morpho Terminal'}</h1>
 					<p class="mb-3 text-sm text-slate-400">
-						<time datetime={article?.locale.date ?? '2026-11-18'}>{new Date(article?.locale.date ?? '2026-11-18').toLocaleDateString('cs-CZ', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}</time>
+						<time datetime={article?.locale.date ?? '2026-11-18'}>{new Date(article?.locale.date ?? '2026-11-18').toLocaleDateString('cs-CZ', { year: 'numeric', month: 'numeric', day: 'numeric', timeZone: 'UTC' })}</time>
 					</p>
 					{article && (
 						<p class="mb-3 text-sm">
